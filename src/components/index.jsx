@@ -9,6 +9,7 @@ import admiring from '../assets/admiring.jpg'
 
 const MemoriesWebsite = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [showTimeline, setShowTimeline] = useState(false);
   const [showHearts, setShowHearts] = useState(false);
   const [showProposal, setShowProposal] = useState(false);
   const [noButtonPosition, setNoButtonPosition] = useState({ x: 0, y: 0 });
@@ -67,6 +68,16 @@ const MemoriesWebsite = () => {
       category: "Adventures"
     }
   ];
+
+  const timeline = [
+  { date: "First Meeting", description: "The day our story began", emoji: "💫" },
+  { date: "First Walk", description: "Getting to know each other", emoji: "🚶‍♂️" },
+  { date: "First Gift", description: "A flower that spoke volumes", emoji: "🌸" },
+  { date: "Confession Day", description: "June 8th - I told you I love you", emoji: "💕" },
+  { date: "Now", description: "Still falling for you every day", emoji: "🥰" },
+  { date: "Future", description: "Forever and always", emoji: "♾️" }
+];
+
 
   const floatingHearts = () => {
     setShowHearts(true);
@@ -143,6 +154,28 @@ const MemoriesWebsite = () => {
         </div>
       )}
 
+     {/* Timeline Modal */}
+      {showTimeline && (
+  <div className="timeline-modal">
+    <div className="timeline-content">
+      <button className="close-timeline" onClick={() => setShowTimeline(false)}>✕</button>
+      <h2>Our Love Timeline 💕</h2>
+      <div className="timeline">
+        {timeline.map((item, index) => (
+          <div key={index} className="timeline-item">
+            <div className="timeline-emoji">{item.emoji}</div>
+            <div className="timeline-info">
+              <h4>{item.date}</h4>
+              <p>{item.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+)}
+
+
       {/* Proposal Modal */}
       {showProposal && (
         <div className="proposal-modal">
@@ -210,6 +243,10 @@ const MemoriesWebsite = () => {
         >
           💕 June 8th, 2025 - The Day I Told You I Love You 💕
         </div>
+       <button className="menu-button" onClick={() => setShowTimeline(true)}>
+          📅 Our Timeline
+        </button>
+
       </header>
 
       {/* Memories Grid */}
