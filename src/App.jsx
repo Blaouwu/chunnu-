@@ -3,7 +3,7 @@ import Index from './components/index'
 
 function App() {
   return (
-    <BrowserRouter basename="/chunnu">
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Index />} />
       </Routes>
