@@ -68,7 +68,7 @@ const MemoriesWebsite = () => {
       id: 6,
       title: "Just you",
       date: "Cutie",
-      description: "Just admiring how pretty and beautigul you are.",
+      description: "Just admiring how pretty and beautiful you are.",
       image: admiring,
       category: "Adventures",
     },
