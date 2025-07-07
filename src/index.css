@@ -1,0 +1,364 @@
+/* Reset and Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Georgia', serif;
+}
+
+/* Container */
+.container {
+  background: linear-gradient(135deg, #ffeef8 0%, #f0e6ff 50%, #e6f3ff 100%);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 0 0 50px 50px;
+  margin: 0 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  letter-spacing: 2px;
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  color: #7f8c8d;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.confession-date {
+  font-size: 1.2rem;
+  color: #e74c3c;
+  font-weight: bold;
+  background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+  padding: 15px 30px;
+  border-radius: 25px;
+  display: inline-block;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+.confession-date:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.6);
+}
+
+/* Memories Grid */
+.memories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  padding: 80px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.memory-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.memory-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+.memory-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  transition: transform 0.3s ease;
+}
+
+.memory-card:hover .memory-image {
+  transform: scale(1.05);
+}
+
+.memory-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.memory-date {
+  font-size: 1rem;
+  color: #e74c3c;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.memory-description {
+  font-size: 1.1rem;
+  color: #34495e;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.category {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: linear-gradient(45deg, #ff6b6b, #ffd93d);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 50px 50px 0 0;
+  margin: 0 20px;
+}
+
+.footer-message {
+  font-size: 1.5rem;
+  color: #2c3e50;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.love-note {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.proposal-button {
+  background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+  color: white;
+  border: none;
+  padding: 20px 40px;
+  font-size: 1.3rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+  margin-top: 30px;
+  font-weight: bold;
+}
+
+.proposal-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(255, 107, 107, 0.6);
+}
+
+/* Proposal Modal */
+.proposal-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.proposal-content {
+  background: white;
+  border-radius: 30px;
+  padding: 60px 40px;
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.proposal-title {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.proposal-question {
+  font-size: 1.3rem;
+  color: #7f8c8d;
+  margin-bottom: 20px;
+}
+
+.proposal-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  position: relative;
+}
+
+.yes-button {
+  background: linear-gradient(45deg, #52c41a, #73d13d);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(82, 196, 26, 0.4);
+  font-weight: bold;
+}
+
+.yes-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(82, 196, 26, 0.6);
+}
+
+.no-button {
+  background: linear-gradient(45deg, #ff4d4f, #ff7875);
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 77, 79, 0.4);
+  font-weight: bold;
+}
+
+.no-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(255, 77, 79, 0.6);
+}
+
+/* Celebration Modal */
+.celebration-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 182, 193, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+  flex-direction: column;
+}
+
+.celebration-emoji {
+  font-size: 5rem;
+  margin-bottom: 20px;
+}
+
+.celebration-text {
+  font-size: 3rem;
+  color: #e74c3c;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+  animation: celebration 0.8s ease-in-out infinite;
+}
+
+.celebration-message {
+  font-size: 1.5rem;
+  color: #e74c3c;
+  text-align: center;
+}
+
+/* Hearts Animation */
+.heart-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.heart {
+  position: absolute;
+  font-size: 2rem;
+  color: #e74c3c;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Keyframe Animations */
+@keyframes float {
+  0%, 100% { 
+    transform: translateY(100vh) rotate(0deg); 
+    opacity: 0; 
+  }
+  10% { 
+    opacity: 1; 
+  }
+  90% { 
+    opacity: 1; 
+  }
+  100% { 
+    transform: translateY(-100px) rotate(360deg); 
+    opacity: 0; 
+  }
+}
+
+@keyframes celebration {
+  0%, 100% { 
+    transform: scale(1); 
+  }
+  50% { 
+    transform: scale(1.1); 
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .memories-grid {
+    grid-template-columns: 1fr;
+    padding: 40px 20px;
+  }
+  
+  .memory-card {
+    padding: 20px;
+  }
+  
+  .proposal-content {
+    padding: 40px 20px;
+  }
+  
+  .proposal-title {
+    font-size: 2rem;
+  }
+  
+  .celebration-text {
+    font-size: 2rem;
+  }
+}
