@@ -174,7 +174,6 @@ body {
   box-shadow: 0 4px 12px rgba(255, 182, 193, 0.5);
 }
 
-
 /* Memories Grid */
 .memories-grid {
   display: grid;
@@ -489,5 +488,3 @@ body {
     height: 50px;
   }
 }
-
-
