@@ -259,7 +259,7 @@ const MemoriesWebsite = () => {
         <h1 className="title">Our Story</h1>
         <p className="subtitle">A collection of our most precious memories</p>
         <div className="confession-date" onClick={floatingHearts}>
-          💕 June 8th, 2025 - The Day I Told You I Love You 💕
+          💕 June 8th, 2025 - The Day I Confessed My Feelings 💕
         </div>
         <button className="menu-button" onClick={() => setShowTimeline(true)}>
           📅 Our Timeline
